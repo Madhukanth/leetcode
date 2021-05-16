@@ -18,7 +18,7 @@ const maximalSquare = function (matrix) {
       const left = Number(dp[i][j - 1]);
       const top = Number(dp[i - 1][j]);
       const leftTop = Number(dp[i - 1][j - 1]);
-      dp[i][j] = (Math.min(Math.min(left, top), leftTop) + 1).toString();
+      dp[i][j] = (Math.min(left, top, leftTop) + 1).toString();
       max = Math.max(max, Number(dp[i][j]));
     }
   }
